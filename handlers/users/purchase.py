@@ -4,7 +4,6 @@ from keyboards.inline.buttons import *
 from loader import dp
 from aiogram import types
 import emoji
-from media import *
 import asyncio
 
 
@@ -20,7 +19,6 @@ async def choose_category(call: CallbackQuery):
 
 @dp.inline_handler(text='meat')
 async def empty_query(query: types.InlineQuery):
-    print('111111111111111111111111111111111111111111')
     await query.answer(
         results=[
             types.InlineQueryResultArticle(
